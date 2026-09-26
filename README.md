@@ -1,23 +1,20 @@
-<h1 align="center">Rui Cao.</h1>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/hero-waves-dark.svg" />
+  <img src="./assets/hero-waves-light.svg" width="100%" alt="Rui Cao. — @rucNick" />
+</picture>
 
 ### Tech stack
 
-**Frontend & mobile**<br />
-React · Next.js · TypeScript · Tailwind CSS · Flutter · Dart
+<picture>
+  <source media="(prefers-color-scheme: dark) and (max-width: 700px)" srcset="./assets/stack-mobile-dark.svg" />
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/stack-desktop-dark.svg" />
+  <source media="(max-width: 700px)" srcset="./assets/stack-mobile-light.svg" />
+  <img src="./assets/stack-desktop-light.svg" width="100%" alt="Frontend and mobile: React, Next.js, TypeScript, Tailwind CSS, Flutter, Dart. Backend and data: Java, Spring Boot, Python, PostgreSQL, Redis, Kafka. AI engineering: Claude Code, Codex, Unsloth, PyTorch, Transformers, MCP. Cloud and workflow: Google Cloud, Docker, GitHub Actions, Linux." />
+</picture>
 
-<img src="./assets/frontend.svg" width="340" alt="React, Next.js, TypeScript, Tailwind CSS, Flutter and Dart" />
+### Contribution history
 
-**Backend & data**<br />
-Java · Spring Boot · Python · PostgreSQL · Redis · Kafka
-
-<img src="./assets/backend.svg" width="340" alt="Java, Spring Boot, Python, PostgreSQL, Redis and Kafka" />
-
-**AI engineering**<br />
-Spring AI · MCP · Claude · Gemini · Tool-using agents · Evals
-
-<img src="./assets/ai.svg" width="340" alt="Spring AI, Model Context Protocol, Claude and Gemini" />
-
-**Cloud & workflow**<br />
-Google Cloud · Docker · GitHub Actions · Linux
-
-<img src="./assets/cloud.svg" width="224" alt="Google Cloud, Docker, GitHub Actions and Linux" />
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/rucNick/rucNick/output/github-snake-dark.svg" />
+  <img src="https://raw.githubusercontent.com/rucNick/rucNick/output/github-snake.svg" width="100%" alt="A snake moving through rucNick's GitHub contribution history" />
+</picture>

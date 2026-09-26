@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark light">
+  <title>Rui Cao. — Local profile preview</title>
+  <style>
+    :root{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color-scheme:dark;--bg:#101014;--surface:#18181e;--text:#eeedf4;--muted:#9897a6;--border:#303039;--button:#24242d;--accent:#b2adff;--highlight:#272338;--profile:#111116}
+    :root[data-theme="light"]{color-scheme:light;--bg:#f1f0f5;--surface:#fff;--text:#23232e;--muted:#71717e;--border:#dedee7;--button:#f2f1f7;--accent:#6352c6;--highlight:#efebff;--profile:#fff}
+    *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);line-height:1.5}button{font:inherit}button:focus-visible,a:focus-visible{outline:3px solid var(--accent);outline-offset:4px}
+    .controls{max-width:1032px;margin:0 auto;padding:32px 24px 26px;display:flex;align-items:flex-start;justify-content:space-between;gap:24px;flex-wrap:wrap}.preview-name{font-size:16px;font-weight:650;letter-spacing:-.2px}.status{display:inline-block;font:10px/1.5 ui-monospace,monospace;letter-spacing:1.4px;color:var(--accent);padding:4px 8px;background:var(--highlight);border-radius:5px;margin-left:10px;vertical-align:middle}.controls p{font-size:13px;color:var(--muted);margin:7px 0 0}.options{display:flex;gap:14px;flex-wrap:wrap;align-items:flex-end}.option{display:grid;gap:6px}.option-label{font-size:10px;letter-spacing:1.2px;text-transform:uppercase;color:var(--muted)}.segmented{display:flex;gap:3px;background:var(--button);padding:4px;border:1px solid var(--border);border-radius:9px}.segmented button,.motion-button{border:0;border-radius:6px;background:transparent;color:var(--muted);padding:6px 11px;cursor:pointer;font-size:12px;white-space:nowrap}.segmented button[aria-pressed="true"]{background:var(--surface);color:var(--text);box-shadow:0 1px 5px #0001}.motion-button{height:36px;background:var(--button);border:1px solid var(--border);color:var(--text);min-width:111px;border-radius:9px}
+    .profile{max-width:984px;margin:0 auto 30px;padding:28px 36px 34px;background:var(--profile);border:1px solid var(--border);border-radius:14px}.file-label{font:11px ui-monospace,monospace;letter-spacing:.2px;color:var(--muted);display:flex;align-items:center;gap:8px;margin-bottom:22px}.file-label svg{width:13px;height:13px;opacity:.7}.file-label span{opacity:.55}.hero{width:100%;height:auto;display:block;border-radius:20px}h1.sr-only{position:absolute;width:1px;height:1px;margin:-1px;overflow:hidden;clip:rect(0,0,0,0)}h2{font-size:19px;letter-spacing:-.4px;margin:29px 0 18px;font-weight:650}.section-heading{display:flex;align-items:center;gap:12px}.section-heading:after{content:"";height:1px;background:var(--border);flex:1}.stacks{display:grid;grid-template-columns:1fr 1fr;column-gap:38px;row-gap:22px}.stack{min-width:0}.stack h3{font-size:14px;font-weight:600;margin:0 0 5px}.stack p{font-size:12px;line-height:1.7;color:var(--muted);margin:0;min-height:41px;max-width:370px}.stack img{display:block;width:300px;max-width:100%;height:auto}.stack.cloud img{width:198px}.stack.ai img{height:auto;padding:7px 0;width:300px}.contribution-header{display:flex;align-items:baseline;justify-content:space-between;gap:12px}.contribution-header h2{margin-bottom:5px}.contribution-header span{font:11px ui-monospace,monospace;color:var(--muted)}.snake{display:block;width:100%;height:auto;min-height:90px}.preview-note{max-width:984px;margin:0 auto 36px;padding:0 24px;text-align:center;font-size:11px;line-height:1.8;color:var(--muted)}
+    @media(max-width:700px){.controls{padding:20px 16px;gap:16px}.options{width:100%;gap:12px}.profile{margin:0 12px 22px;padding:20px;border-radius:12px}.stacks{grid-template-columns:1fr;gap:20px}.stack p{min-height:0;margin-bottom:5px}.stack img{width:300px}.file-label{margin-bottom:16px}.status{margin-left:6px;font-size:9px}.contribution-header{display:block}.contribution-header span{display:block;margin-top:3px}.preview-note{font-size:10px}.hero{border-radius:12px}}
+  </style>
+</head>
+<body>
+  <header class="controls" aria-label="Local preview controls">
+    <div><div class="preview-name">Profile preview <span class="status">LOCAL ONLY</span></div><p>Waves + contribution snake. Static tech stack.</p></div>
+    <div class="options">
+      <div class="option"><span class="option-label" id="theme-label">Theme</span><div class="segmented" role="group" aria-labelledby="theme-label"><button type="button" data-theme="dark" aria-pressed="true">Dark</button><button type="button" data-theme="light" aria-pressed="false">Light</button></div></div>
+      <div class="option"><span class="option-label">Animation</span><button type="button" class="motion-button" id="motion" aria-pressed="false">Pause motion</button></div>
+    </div>
+  </header>
+  <main class="profile" aria-label="Proposed GitHub profile">
+    <div class="file-label"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" aria-hidden="true"><path d="M3 1.5h7l3 3V14H3zM10 1.5V5h3M5 8h6M5 11h4"/></svg>rucNick <span>/ README.md</span></div>
+    <h1 class="sr-only">Rui Cao.</h1>
+    <img id="hero" class="hero" src="assets/hero-waves-dark-animated.svg" alt="Rui Cao. — @rucNick" width="880" height="270">
+    <h2 class="section-heading">Tech stack</h2>
+    <div class="stacks">
+      <section class="stack"><h3>Frontend &amp; mobile</h3><p>React · Next.js · TypeScript · Tailwind CSS · Flutter · Dart</p><img data-stack="frontend" src="assets/frontend-static.svg" width="342" height="52" alt="React, Next.js, TypeScript, Tailwind CSS, Flutter and Dart"></section>
+      <section class="stack"><h3>Backend &amp; data</h3><p>Java · Spring Boot · Python · PostgreSQL · Redis · Kafka</p><img data-stack="backend" src="assets/backend-static.svg" width="342" height="52" alt="Java, Spring Boot, Python, PostgreSQL, Redis and Kafka"></section>
+      <section class="stack ai"><h3>AI engineering</h3><p>Claude Code · Codex · Unsloth · PyTorch · Transformers · MCP</p><img data-stack="ai" src="assets/ai-static.svg" width="340" height="88" alt="Claude Code, Codex, Unsloth, PyTorch, Transformers and MCP"></section>
+      <section class="stack cloud"><h3>Cloud &amp; workflow</h3><p>Google Cloud · Docker · GitHub Actions · Linux</p><img data-stack="cloud" src="assets/cloud-static.svg" width="226" height="52" alt="Google Cloud, Docker, GitHub Actions and Linux"></section>
+    </div>
+    <div class="contribution-header"><h2>Contribution history</h2><span>rucNick / snake</span></div>
+    <img id="snake" class="snake" src="assets/snake-dark-animated.svg" alt="A snake moving through rucNick's actual GitHub contribution history">
+  </main>
+  <footer class="preview-note">Controls are for this local preview only. Profile animations use SVG assets.<br>Contribution graph: saved GitHub snapshot. No live account changes.</footer>
+  <script>
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const state = { theme: 'dark', paused: reducedMotion.matches };
+    const motion = document.getElementById('motion');
+    function render() {
+      document.documentElement.dataset.theme = state.theme;
+      document.querySelectorAll('button[data-theme]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.theme === state.theme)));
+      motion.setAttribute('aria-pressed', String(state.paused));
+      motion.textContent = state.paused ? 'Resume motion' : 'Pause motion';
+      const suffix = state.paused ? 'still' : 'animated';
+      document.getElementById('hero').src = `assets/hero-waves-${state.theme}-${suffix}.svg`;
+      document.getElementById('snake').src = `assets/snake-${state.theme}-${suffix}.svg`;
+    }
+    document.querySelectorAll('button[data-theme]').forEach(button => button.addEventListener('click', () => { state.theme = button.dataset.theme; render(); }));
+    motion.addEventListener('click', () => { state.paused = !state.paused; render(); });
+    reducedMotion.addEventListener('change', event => { state.paused = event.matches; render(); });
+    render();
+  </script>
+</body>
+</html>

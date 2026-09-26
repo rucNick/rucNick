@@ -1,2 +1,5 @@
 __pycache__/
 .DS_Store
+docs/preview/assets/
+docs/preview/published-assets
+docs/preview/release-check.html

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 270" role="img" aria-labelledby="title desc">
+    <title id="title">Rui Cao.</title><desc id="desc">Rui Cao, @rucNick, with flowing Waves artwork.</desc>
+    <defs><clipPath id="clip"><rect x="1" y="1" width="878" height="268" rx="20"/></clipPath>
+    <linearGradient id="accent"><stop stop-color="#8b86ff"/><stop offset=".5" stop-color="#60c6b2"/><stop offset="1" stop-color="#ffad72"/></linearGradient></defs>
+    <style>text{font-family:Arial,Helvetica,sans-serif}.ribbon{stroke-dasharray:120 42;animation:flow 8s linear infinite}
+    .ribbon.alt{animation-direction:reverse;animation-duration:11s}
+    .spark{transform-box:fill-box;transform-origin:center;animation:spin 9s linear infinite}
+    .underline{transform-origin:48px 177px;animation:stretch 4s ease-in-out infinite}
+    @keyframes flow{to{stroke-dashoffset:-648}}
+    @keyframes spin{to{transform:rotate(360deg)}}
+    @keyframes stretch{0%,100%{transform:scaleX(.65)}50%{transform:scaleX(1)}}
+    @media(prefers-reduced-motion:reduce){.ribbon,.spark,.underline{animation:none}}
+    </style>
+    <rect x="1" y="1" width="878" height="268" rx="20" fill="#f8f8fd" stroke="#e5e5ef"/>
+    <g clip-path="url(#clip)"><g fill="none" stroke-width="24" stroke-linecap="round">
+        <path class="ribbon" d="M552 40C680 40 620 218 776 218S910 24 940 36" stroke="#8b86ff"/>
+        <path class="ribbon alt" d="M520 97C645 -10 705 293 872 113" stroke="#60c6b2"/>
+        <path class="ribbon" d="M562 202C605 272 738 12 868 63" stroke="#ffad72" stroke-width="15"/>
+        </g></g>
+    <text x="47" y="151" font-size="84" font-weight="700" letter-spacing="-4" fill="#22222a">Rui Cao.</text>
+    <rect class="underline" x="50" y="175" width="265" height="5" rx="2.5" fill="url(#accent)"/>
+    <text x="52" y="215" font-size="17" letter-spacing="1.5" fill="#6c6c7c">@rucNick</text>
+    <g class="spark" stroke="#ffad72" stroke-width="3" stroke-linecap="round"><path d="M425 66V88M414 77H436"/></g>
+    </svg>
